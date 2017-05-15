@@ -1,4 +1,4 @@
-package br.com.fiap.turma29scj.fundamentosjava;
+package br.com.fiap.turma29scj.fundamentosjava.exercicios;
 
 
 import javax.swing.JOptionPane;

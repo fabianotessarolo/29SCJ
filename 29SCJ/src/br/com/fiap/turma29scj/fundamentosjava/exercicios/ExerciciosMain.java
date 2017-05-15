@@ -1,9 +1,9 @@
-package br.com.fiap.turma29scj.fundamentosjava;
+package br.com.fiap.turma29scj.fundamentosjava.exercicios;
 
 
 import javax.swing.JOptionPane;
 
-public class Main {
+public class ExerciciosMain {
 
 	public static void main(String[] args) {
 		
