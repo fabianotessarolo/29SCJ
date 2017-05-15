@@ -1,0 +1,6 @@
+Os resultados das váriáveis são:
+
+a:
+b:
+c: 
+teste
