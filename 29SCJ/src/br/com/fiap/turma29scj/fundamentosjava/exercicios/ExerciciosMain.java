@@ -17,10 +17,7 @@ public class ExerciciosMain {
 			new Exercicio1().reverse();
 			break;
 		case 2:
-			Exercicio3 ex3 = new Exercicio3();
-			ex3.quantosFuncionarios();
-			ex3.carregaSalarios();
-			ex3.executaCalculo();
+			new Exercicio3().executa();
 			break;
 		default:
 			break;

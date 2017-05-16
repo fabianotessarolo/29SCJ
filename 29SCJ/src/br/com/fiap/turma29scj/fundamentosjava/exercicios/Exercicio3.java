@@ -9,6 +9,14 @@ public class Exercicio3 {
 	private double salarios [];
 	private double media;
 	
+	
+	public void executa() {
+		quantosFuncionarios();
+		
+		
+		
+	}
+	
 	public void quantosFuncionarios() {
 		this.quantosFuncionarios = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de funcionários:"));
 		this.salarios = new double [quantosFuncionarios];
