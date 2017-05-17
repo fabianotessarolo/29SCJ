@@ -1,6 +1,6 @@
 Os resultados das váriáveis são:
 
-a:
-b:
-c: 
-teste
+a=3,b=2,c=2
+
+Explicação: Na segunda primeira interação ele acaba caindo no if e entao executa o continue,
+ que ignora o restante do código no loop. 
