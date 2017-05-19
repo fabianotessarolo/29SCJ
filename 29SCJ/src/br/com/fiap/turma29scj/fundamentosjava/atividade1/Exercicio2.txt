@@ -1,0 +1,6 @@
+Os resultados das váriáveis são:
+
+a=3,b=2,c=2
+
+Explicação: Na primeira interação ele acaba caindo no if e entao executa o continue,
+ que ignora o restante do código no loop. 
