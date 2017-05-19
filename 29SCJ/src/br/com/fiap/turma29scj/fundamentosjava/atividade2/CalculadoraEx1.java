@@ -2,7 +2,7 @@ package br.com.fiap.turma29scj.fundamentosjava.atividade2;
 
 import javax.swing.JOptionPane;
 
-public class Calculadora implements CalculadoraBasica {
+public class CalculadoraEx1 implements CalculadoraBasica {
 	
 
 	@Override
@@ -35,19 +35,18 @@ public class Calculadora implements CalculadoraBasica {
 	}
 	
 	public void calcular(float op1, float op2, String operacao) {
-		if(operacao == "+"){
-			System.out.println(somar(op1, op2));
-		}
-		if(operacao == "-"){
+		if(operacao.equals("+")){
+			System.out.println(somar(op1, op2));			
+			if(operacao.equals("-")){
 			System.out.println(subtrair(op1, op2));
-		}
-		if(operacao == "*"){
+				if(operacao.equals("*")){
 			System.out.println(multiplicar(op1, op2));
-		}
-		if(operacao == "/"){
+					if(operacao.equals("/")){
 			System.out.println(dividir(op1, op2));
-		}
-		
+					}
+				}
+			}
+		}				
 	}
 
 }
