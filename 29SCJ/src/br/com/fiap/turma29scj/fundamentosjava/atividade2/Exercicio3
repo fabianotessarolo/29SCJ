@@ -1,0 +1,2 @@
+A) Verdadeiro, pois a classe ChowChow estende de Cachorro, herdando então todos os métodos.
+B)Falso pois Cachorro não estende de Chow Chow, Chow Chow é menor que a classe Cachorro.

@@ -1,0 +1,18 @@
+a. objeto para equipamento (objeto=equipamento;);
+Implícita
+b. objeto para móvel (objeto=movel;);
+Implícita
+c. equipamento para tablet2 (equipamento=tablet2;);
+Implícita
+d. equipamento para smartphone2 (equipamento=smartphone2;);
+Implícita
+e. smartphone para tablet (smartphone=tablet;);
+Implícita
+f. smartphone2 para tablet2 (smartphone2=tablet2;);
+Impossível
+g. equipamento para tablete (equipamento=(Equipamento) tablet;);
+Explícita
+h. movel para tablete (movel=(Movel) tablet;);
+Explicita
+i. tablet para equipamento (tablet=(EquipamentoEletronico) equipamento;);
+Explicita.

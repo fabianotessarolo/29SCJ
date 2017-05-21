@@ -1,0 +1,16 @@
+public class StringEx {
+	public static void main(String[] args) { 
+		String string = "";
+		int z=0;
+		for (int i = 0; i < 12; i++) {
+			z++;
+		string += "string"; 
+		}	
+	}
+}
+
+a. Quantos objetos do tipo String serão criados?
+Neste caso sao criados 13 objetos, um para a declaraçao inicial + 12 criados no loop.
+Como o conteúdo é modificado no loop, o java cria um novo objeto na memória.
+b. Qual seria a forma mais eficiente de manipular os dados em memória?
+Podemos utiliar o StringBuilder para este caso.
