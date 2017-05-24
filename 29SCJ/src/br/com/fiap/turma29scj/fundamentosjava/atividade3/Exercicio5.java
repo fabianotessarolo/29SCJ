@@ -19,7 +19,7 @@ public class Exercicio5 {
 		obj.saveFile(texto, "mensagemCodificada.txt");
 		JOptionPane.showMessageDialog(null, "O texto codificado é: " + obj.readFile("mensagemCodificada.txt"));
 		
-		obj.saveFile(obj.decodifica(obj.readFile("mensagemCodificada.txt")), "mensagemDecodificada");		
+		obj.saveFile(obj.decodifica(obj.readFile("mensagemCodificada.txt")), "mensagemDecodificada.txt");		
 		JOptionPane.showMessageDialog(null, "O texto decodificado é: " + obj.readFile("mensagemDecodificada.txt"));
 	}
 
