@@ -11,19 +11,46 @@ public class Aeroporto extends Thread {
 		
 	}
 	
-	public synchronized boolean aguardarPistaDisponivel() throws InterruptedException {
-		while(!this.pistaDisponivel){
-			System.out.println("Torre de Comando: Pista em uso!!");
-			wait();
-			return false;
-		}
-		return true;
+	
+	
+	public String getNomeAeroporto() {
+		return nomeAeroporto;
 	}
 
-	
-	public void alterarEstadoPista() {
-		this.pistaDisponivel = !this.pistaDisponivel;
+
+
+	public synchronized void aguardarPistaDisponivel() {
+			try {
+				wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		
 	}
+	
+	public synchronized void alterarEstadoPista() {
+		this.pistaDisponivel = !this.pistaDisponivel;
+		if(pistaDisponivel){
+   			System.out.println("Torre de comando: Pista disponível!");
+   	   		notify();
+   		}else{
+   			System.out.println("Torre de comando: Pista Fechada");
+   		}   	
+		
+	}
+	
+	@Override
+   	public void run() {
+   		while(true){
+   			alterarEstadoPista();
+   			
+			try{
+				sleep(3_000);
+			}catch(InterruptedException e){
+				e.printStackTrace();
+			}
+   		}
+   	}
 	
 
 }

@@ -6,10 +6,8 @@ public class Aviao extends Thread {
 	
 	private String nomeDoVoo;
 	private Aeroporto aeroporto;
-	private boolean emRota = false;
 	
 	public Aviao(String nomeDoVoo, Aeroporto aeroporto) {
-		super();
 		this.nomeDoVoo = nomeDoVoo;
 		this.aeroporto = aeroporto;
 	}
@@ -18,46 +16,28 @@ public class Aviao extends Thread {
 		System.out.println(nomeDoVoo + " pedindo permissao para decolar!");
 		aeroporto.aguardarPistaDisponivel();
 		System.out.println("Permissão concedida! Decolou o voo " + nomeDoVoo);
-		emRota = true;
 	}
 	
-	public void voar() {
-		try {
+	public void voar() throws InterruptedException{		
 			TimeUnit.SECONDS.sleep(2);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-			
-		
-		
 	}
 	
 	public void aterrisar() throws InterruptedException {
 		System.out.println(nomeDoVoo + " pedindo permissao para pousar!");
 		aeroporto.aguardarPistaDisponivel();
-		System.out.println("Permissão concedida! Pousou o voo " + nomeDoVoo);
-		emRota = true;
-		
-		
-		
-	} 
+		System.out.println("Permissão concedida! Pousou o voo " + nomeDoVoo);		
+	}
 	
-	
-	public void run() {
-		
+	@Override
+   	public void run() {
 		try {
-			this.decolar();
-			this.voar();
-			this.aterrisar();
+			decolar();
+			voar();
+			aterrisar();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-		
-	}
+	}	
 
 }
