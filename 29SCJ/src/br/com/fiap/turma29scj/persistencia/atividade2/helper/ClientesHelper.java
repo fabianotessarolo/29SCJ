@@ -38,8 +38,8 @@ public class ClientesHelper {
 	}
 	
 	public Clientes findCliente(int idCliente){
-		TypedQuery<Clientes> tQuery = em.createQuery("select f from Clientes f where IDCLIENTE = :idCliente", Clientes.class);
-		tQuery.setParameter("idCliente", idCliente); 
+		TypedQuery<Clientes> tQuery = em.createQuery("select f from Clientes f where IDCLIENTE = :cliente", Clientes.class);
+		tQuery.setParameter("cliente", idCliente); 
 		return tQuery.getSingleResult(); 
 		
 	}

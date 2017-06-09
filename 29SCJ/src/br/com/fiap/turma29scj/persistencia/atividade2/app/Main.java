@@ -20,7 +20,7 @@ public class Main {
 		System.out.println("Seleção de um cliente");
 		listOneCliente();
 		System.out.println("Listagem de pedidos do cliente 1");
-		// listPedidos();
+		listPedidos();
 
 	}
 

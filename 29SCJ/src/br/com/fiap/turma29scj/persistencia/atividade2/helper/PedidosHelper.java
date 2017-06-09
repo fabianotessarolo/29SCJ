@@ -32,7 +32,8 @@ public class PedidosHelper {
 	}
 
 	public List<Pedidos> listPedidos(Clientes cliente) {
-		TypedQuery<Pedidos> tQuery = em.createQuery("select f from Pedidos f where f.idCliente = :cliente.IDCLIENTE", Pedidos.class);
+		TypedQuery<Pedidos> tQuery = em.createQuery("select f from Pedidos f where IDCLIENTE = :cliente", Pedidos.class);
+		tQuery.setParameter("cliente", cliente);
 		return tQuery.getResultList();
 	}
 
